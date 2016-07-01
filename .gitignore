@@ -1,2 +1,3 @@
-*.json
+electron.json
+node.json
 node_modules

@@ -1,0 +1,19 @@
+{
+  "name": "usb-driver-evan-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "on-electron": "./node_modules/.bin/electron . > electron.json",
+    "on-node": "node index.js > node.json",
+    "diff": "./node_modules/.bin/json-diff electron.json node.json",
+    "start": "npm run on-electron; npm run on-node; npm run diff"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.5",
+    "json-diff": "^0.3.1",
+    "usb-driver": "git+ssh://git@github.com:evanphx/usb-driver.git#f-nan-2"
+  }
+}
